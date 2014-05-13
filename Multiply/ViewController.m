@@ -3,7 +3,6 @@
 //  Multiply
 //
 //  Created by Robert Figueras on 5/12/14.
-//  Copyright (c) 2014 AppSpaceship. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -22,14 +21,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 
 //    self.myMultiplier.text = [NSString stringWithFormat:@"%g",[self.mySlider.value]];
 
 
 }
 - (IBAction)onCalculateButtonPressed:(id)sender {
-
 
 
     int convertedNumber = [self.myNumber.text intValue];
@@ -41,13 +38,15 @@
         self.myView.backgroundColor = [UIColor greenColor];
     }
 
+    //*** modulo returns the remainder of the two inputs
     float myRemainderDivisibleBy3= product % 3;
-    if (myRemainderDivisibleBy3 == 0){
+
+    if (myRemainderDivisibleBy3 == 0){ // *** if the modulo is 0, it is evenly divisible by 3
 
         self.myAnswer.text = @"fizz";
     }
 
-    float myRemainderDivisibleBy5= product % 5;
+    float myRemainderDivisibleBy5= product % 5; // *** if the modulo is 0, it is evenly divisible by 5
     if (myRemainderDivisibleBy5 == 0){
 
         self.myAnswer.text = @"buzz";
@@ -75,7 +74,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
